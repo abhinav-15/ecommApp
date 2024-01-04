@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(cors(
   {
     origin:["https://ecomfronted.vercel.app/"],
-    methods:["POST","GET"],
+    methods:["POST"],
     credentials: true
   }
 ));
