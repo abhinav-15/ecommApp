@@ -18,11 +18,23 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors(
   {
-    origin:["https://ecomfronted.vercel.app"],
-    methods:["POST"],
-    credentials: true
+     origin: ["https://ecomfronted.vercel.app"],
+  methods: ["POST", "OPTIONS"], // Include OPTIONS method for preflight
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
   }
 ));
+
+//new
+// Enable preflight for all routes
+app.options("*", cors());
+
+// Set credentials in the response headers
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Credentials", true);
+  next();
+});
+
 
 // Connect to MongoDB
 mongoose.connect(process.env.DATABASE_URL, {
