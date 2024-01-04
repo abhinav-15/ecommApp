@@ -1,8 +1,9 @@
 ## Technologies Used
 
-Node
-Express
-MongoDB
+- [Node](https://nodejs.com/)
+- [Express](https://expressjs.com/)
+- [MongoDB](https://www.mongodb.com/)
+
 
 ## Postman Testing
 
