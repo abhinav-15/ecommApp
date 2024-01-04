@@ -16,7 +16,13 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(
+  {
+    origin:["https://ecomfronted.vercel.app/"],
+    methods:["POST","GET"],
+    credentials: true
+  }
+));
 
 // Connect to MongoDB
 mongoose.connect(process.env.DATABASE_URL, {
