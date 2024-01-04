@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors(
   {
-    origin:["https://ecomfronted.vercel.app/"],
+    origin:["https://ecomfronted.vercel.app"],
     methods:["POST"],
     credentials: true
   }
