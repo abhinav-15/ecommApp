@@ -18,8 +18,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors(
   {
-    origin:["https://ecomfronted.vercel.app/"],
-    methods:["POST","GET"],
+    origin:"https://ecomfronted.vercel.app",
+    methods:'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
   }
